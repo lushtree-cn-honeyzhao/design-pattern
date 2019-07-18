@@ -1,0 +1,30 @@
+
+@startuml
+title Simple Factory
+abstract class Operation{
+    -numberA: double
+    -numberB: double
+    +calculate(): double
+}
+class OperationAddition{
+    +calculate(): double
+}
+class OperationSubtraction{
+    +calculate(): double
+}
+class OperationMultiplication{
+   +calculate(): double
+}
+class OperationDivision{
+    +calculate(): double
+}
+class OperationFactory{
+    +createOperation(): Operation
+}
+
+Operation <|-- OperationAddition
+Operation <|-- OperationSubtraction
+Operation <|-- OperationMultiplication
+Operation <|-- OperationDivision
+OperationFactory --> Operation: create
+@enduml

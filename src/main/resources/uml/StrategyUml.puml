@@ -1,0 +1,30 @@
+@startuml
+Title Strategy
+abstract class CashSuper{
+    +acceptCash(): double
+}
+
+class CashNormal{
+    +acceptCash(): double
+}
+class CashRebate{
+    -moneyRebate: double
+    +acceptCash(): double
+}
+class CashReturn{
+    -moneyCondition: double
+    -moneyReturn: double
+    +acceptCash(): double
+}
+
+class CashContext{
+    -cashSuper: CashSuper
+    +getResult(): double
+}
+
+CashSuper <|-- CashNormal
+CashSuper <|-- CashRebate
+CashSuper <|-- CashReturn
+
+CashContext o--> CashSuper
+@enduml

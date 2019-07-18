@@ -1,0 +1,18 @@
+@startuml
+
+title Singleton
+
+class Hungry{
+    -hungry: Hungry
+    -name
+    -Hungry()
+    +getInstance(): Hungry
+}
+class Lazy{
+    -lazy
+    -name
+    -Lazy()
+    +getInstance(): Lazy
+}
+
+@enduml
