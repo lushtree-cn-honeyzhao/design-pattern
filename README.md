@@ -14,7 +14,7 @@
 - 依赖倒转原则，高层模块不应该依赖低层模块，都应该依赖抽象。抽象不应该依赖细节，细节应该依赖抽象
 - 里氏代换原则，子类必须能替换掉它们的父类型
 - 迪米特法则，也叫最少知识原则，如果两个类不必彼此直接通信，那么这两个类就不应当发生直接的相互作用。如果其中一个类需要调用另一个类的某一个方法的话，可以通过第三者转发这个调用
-- 合成/聚合复用原则(CARP)，尽量使用合成/聚合，尽量不要使用类继承 
+- 合成/聚合复用原则(CARP)(Composite/Aggregate Reuse Principle)，尽量使用合成/聚合，尽量不要使用类继承 
 
 ##### 设计模式种类
 1. [简单工厂模式(Simple Factory)](https://github.com/honeyzhaoAliyun/design-pattern/tree/master/src/main/java/com/job/designpattern/simplefactory),  
